@@ -52,3 +52,7 @@ function rotate() {
 
 render();
 setInterval(rotate, 2600);
+
+window.addEventListener('resize', () => {
+    updateArcPositions(); // your function that sets transforms for 3D carousel
+});

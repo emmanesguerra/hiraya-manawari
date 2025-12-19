@@ -78,14 +78,14 @@ body {
 .card {
     background: white;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 12px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card h2 {
@@ -114,4 +114,16 @@ body {
 .wp-block-image {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
+}
+
+@media (max-width: 800px) {
+    .sharp-curve {
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+    }
+
+    .sharp-curve-reverse {
+        border-top-left-radius: 0%;
+        border-top-right-radius: 0%;
+    }
 }

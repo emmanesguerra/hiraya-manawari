@@ -39,3 +39,18 @@
   height: 100%;
   object-fit: cover;
 }
+
+@media (max-width: 800px) {
+  .arc-container {
+    overflow: hidden;
+  }
+  .arc-card {
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 396px) {
+  .arc-container {
+    display: none;
+  }
+}
