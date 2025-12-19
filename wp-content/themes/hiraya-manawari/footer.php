@@ -23,28 +23,16 @@
                 <h3 class="text-lg font-semibold mb-4 uppercase tracking-wide">
                     Quick Links
                 </h3>
-                <ul class="space-y-2">
-                    <li>
-                        <a href="<?php echo home_url(); ?>" class="text-gray-300 hover:text-white transition">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="text-gray-300 hover:text-white transition">
-                            About
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="text-gray-300 hover:text-white transition">
-                            Services
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="text-gray-300 hover:text-white transition">
-                            Contact
-                        </a>
-                    </li>
-                </ul>
+                <?php
+                wp_nav_menu([
+                    'theme_location' => 'footer',
+                    'container'      => false,
+                    'menu_class'     => 'space-y-2',
+                    'fallback_cb'    => false,
+                    'link_before'    => '',
+                    'link_after'     => '',
+                ]);
+                ?>
             </div>
 
             <!-- Contact / Social -->

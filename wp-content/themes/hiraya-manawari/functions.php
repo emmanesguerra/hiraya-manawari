@@ -156,3 +156,11 @@ add_action('save_post', function($post_id){
         delete_post_meta($post_id, '_selected_js');
     }
 });
+
+function theme_register_menus() {
+    register_nav_menus([
+        'primary' => __('Primary Menu', 'your-theme'),
+        'footer'  => __('Footer Menu', 'your-theme'),
+    ]);
+}
+add_action('after_setup_theme', 'theme_register_menus');
