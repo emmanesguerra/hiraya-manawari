@@ -1,0 +1,41 @@
+/* 3D depth */
+#arcCarousel {
+    perspective: 1400px;
+}
+
+/* Item wrapper */
+.arc-container {
+  position: relative;
+  height: 400px; /* fixed height */
+  perspective: 1200px;
+}
+
+.arc-item {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-style: preserve-3d;
+  transition:
+    transform 1s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.9s ease,
+    z-index 0.1s; /* small delay so z-index updates smoothly */
+  will-change: transform, opacity, z-index;
+}
+
+.arc-card {
+  width: 250px;
+  height: 400px; /* fixed size */
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0,0,0,.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+
+.arc-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

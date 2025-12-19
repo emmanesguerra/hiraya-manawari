@@ -74,3 +74,44 @@ body {
     border-top-left-radius: 75%;
     border-top-right-radius: 75%;
 }
+
+.card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 16px rgba(0,0,0,0.2);
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.card .btn a {
+    margin-top: 15px;
+    color: rgb(201, 83, 83);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-size: smaller;
+}
+
+.card .btn a:hover {
+    color: rgb(224, 13, 13);
+}
+
+.wp-block-image {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
