@@ -1,0 +1,27 @@
+.tw-content * {
+    all: revert;
+}
+
+.tw-content h1,
+.tw-content h2,
+.tw-content h3,
+.tw-content h4 {
+    color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
+}
+
+.tw-content table,
+.tw-content table thead,
+.tw-content table td,
+.tw-content table th {
+    border-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
+}
+
+.tw-content table thead {
+    background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
+    color: #fff;
+}
+
+.tw-content p a {
+    color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
+    text-decoration: none;
+}

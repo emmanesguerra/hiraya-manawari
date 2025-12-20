@@ -30,9 +30,17 @@ get_header(); ?>
 
             <!-- Right: Illustration -->
             <div class="bg-white p-10 rounded-3xl shadow-xl">
-                <h1 class="text-5xl font-bold text-gray-800 mb-6 animate-fade-in">
+                <h1 class="
+                    text-3xl
+                    sm:text-4xl
+                    md:text-5xl
+                    font-bold
+                    text-gray-800
+                    mb-6
+                    animate-fade-in
+                    ">
                     Have Some Questions?
-                </h1>
+                    </h1>
                 <p class="text-gray-600 mb-10 text-lg">
                     We’re here to help. Send us a message and we’ll respond as soon as possible.
                 </p>

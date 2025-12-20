@@ -13,7 +13,7 @@ get_header(); ?>
 </div>
 
 <!-- Main Content -->
-<main class="container mx-auto px-4 py-16 space-y-16 max-w-6xl">
+<main class="container tw-content mx-auto px-4 py-16 space-y-16 max-w-6xl">
     <?php
     if(have_posts()) :
         while(have_posts()) : the_post();

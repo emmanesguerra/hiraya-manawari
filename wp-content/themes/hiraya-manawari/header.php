@@ -14,7 +14,7 @@
 
 <header>
     <!-- NAVBAR -->
-    <nav id="navbar" class="fixed top-0 w-full bg-blue-600 text-white z-50 transition-all duration-300">
+    <nav id="navbar" class="relative md:fixed md:top-0 w-full bg-blue-600 text-white z-50 transition-all duration-300">
         <div class="container mx-auto px-4 flex justify-between items-center py-4">
 
             <!-- Logo -->
@@ -29,13 +29,12 @@
                 <?php
                 wp_nav_menu([
                     'theme_location' => 'primary',
-                    'container' => 'ul',
-                    'menu_class' => 'flex space-x-8 font-semibold text-lg',
-                    'fallback_cb' => 'wp_page_menu',
-                    'link_before' => '<span class="hover:text-gray-200 transition-colors duration-200">',
-                    'link_after' => '</span>',
+                    'container'      => false,
+                    'menu_class'     => 'flex space-x-8 font-semibold text-lg relative',
+                    'fallback_cb'    => false,
                 ]);
                 ?>
+
             </div>
 
             <!-- Mobile Menu Button -->
@@ -52,15 +51,13 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden bg-blue-600 md:hidden flex flex-col space-y-2 px-4 pb-4">
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-600 px-4 pb-4">
             <?php
             wp_nav_menu([
                 'theme_location' => 'primary',
-                'container' => 'ul',
-                'items_wrap' => '%3$s',
-                'fallback_cb' => 'wp_page_menu',
-                'link_before' => '<span class="block py-2 text-white hover:text-gray-200">',
-                'link_after' => '</span>',
+                'container'      => false,
+                'menu_class'     => 'flex flex-col space-y-1 font-semibold',
+                'fallback_cb'    => false,
             ]);
             ?>
         </div>
