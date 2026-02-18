@@ -164,3 +164,51 @@ function theme_register_menus() {
     ]);
 }
 add_action('after_setup_theme', 'theme_register_menus');
+
+// Handle Hiraya Contact Form
+add_action('admin_post_nopriv_hiraya_contact_form', 'hiraya_handle_contact_form');
+add_action('admin_post_hiraya_contact_form', 'hiraya_handle_contact_form');
+
+function hiraya_handle_contact_form() {
+
+    // Verify nonce
+    if (
+        !isset($_POST['hiraya_contact_nonce_field']) ||
+        !wp_verify_nonce($_POST['hiraya_contact_nonce_field'], 'hiraya_contact_nonce')
+    ) {
+        wp_die('Security check failed');
+    }
+
+    // Sanitize inputs
+    $name = sanitize_text_field($_POST['name']);
+    $email = sanitize_email($_POST['email']);
+    $subject = sanitize_text_field($_POST['subject']);
+    $message = sanitize_textarea_field($_POST['message']);
+
+    // Change this to your real domain email
+    $to = 'emmanesguerra2013@gmail.com';
+
+    $mail_subject = 'Contact Form: ' . $subject;
+
+    $body  = "Name: $name\n";
+    $body .= "Email: $email\n\n";
+    $body .= "Message:\n$message";
+
+    $headers = array(
+        'Content-Type: text/plain; charset=UTF-8',
+        'From: Hiraya Website <no-reply@yourdomain.com>',
+        'Reply-To: ' . $name . ' <' . $email . '>',
+    );
+
+    $sent = wp_mail($to, $mail_subject, $body, $headers);
+
+    // Redirect back with status
+    if ($sent) {
+        wp_redirect(add_query_arg('status', 'success', wp_get_referer()));
+    } else {
+        error_log('Contact form triggered');
+        wp_redirect(add_query_arg('status', 'error', wp_get_referer()));
+    }
+
+    exit;
+}
