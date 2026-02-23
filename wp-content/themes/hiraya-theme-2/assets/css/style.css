@@ -1,0 +1,110 @@
+header {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fcf8f2;
+    color: #333;
+    border-bottom: 3px solid #b3b3b37e;
+}   
+
+.slanted-bg-container
+{
+    border-bottom: #b3b3b37e 1px solid;
+}
+
+.slanted-bg {
+    background-color: #b3b3b3;
+    -webkit-mask-image: url("../images/diagonal-lines.svg");
+    mask-image: url("../images/diagonal-lines.svg");
+    mask-repeat: repeat;
+}
+
+.logo
+{
+    background: url("../images/dreamcatcher.png") no-repeat;
+    background-size: contain;
+    color: #8a8780;
+    font-size: 35px;
+    padding-left: 5rem !important;
+}
+
+.main-menu
+{
+    font-size: 14px;
+    color: #8a8780;
+    padding: 0;
+    margin: 0;
+}
+
+.main-menu>li
+{
+    display: inline-block;
+    padding: 4rem 1.5rem;
+    position: relative;
+}
+.main-menu>li::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid transparent; /* base transparent */
+    border-bottom: 8px solid #b3b3b37e; /* only top visible */
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.main-menu > li:hover::after {
+    opacity: 1;
+}
+.main-menu>li>a
+{
+    color: #b1afab;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: .5rem;
+    border-radius: 5px;
+}
+.main-menu>li>a:hover
+{
+    background: #b3b3b37e;
+    color: #000;
+}
+
+.main-menu>li>ul
+{
+    display: none;
+    position: absolute;
+    background-color: #b3b3b3;
+    padding: 0.5rem;
+}
+
+.banner-container .info
+{
+    background-color: #292929;
+    padding: 2rem;
+    color: #a8a8a8;
+    border: 2px solid #292929;
+}
+.banner-container .info .btn-link
+{
+    border: 0;
+    border-left: 3px solid #e27130;
+    border-radius: 0;
+    color: #e27130;
+    text-decoration: none;
+}
+.banner-container .info .btn-link:hover
+{
+    border-left: 3px solid #fff;
+    color: #fff;
+}
+
+.banner-container .image
+{
+    background-color: #292929;
+    border: 2px solid #292929;
+}
