@@ -8,8 +8,9 @@ get_header(); ?>
 <!-- Banner Section -->
 <div id="banner" class="bg-blue-600 text-white text-center py-40 px-4 transition-all duration-300 sharp-curve">
     <div class="container mx-auto px-4">
-        <h1 class="text-4xl font-bold mb-4">Welcome to <?php bloginfo('name'); ?></h1>
-        <p class="text-lg">Your dream starts here</p>
+        <h1 class="text-4xl font-bold mb-4"><?php bloginfo('name'); ?></h1>
+        <h3 class="text-xl italic my-5">Bridging Dreams Across Borders – Connecting Nations, Empowering Aspirations</h3>
+        <p class="text-lg">Dream. Connect. Achieve.</p>
         
 <!-- 3D Tilted Carousel -->
 <div class="arc-container mt-16">
