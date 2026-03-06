@@ -121,7 +121,7 @@ html {
 }
 
 #menu-header-menu > li.menu-item {
-    border-bottom: 2px solid  rgb(37 99 235 / var(--tw-bg-opacity, 1));
+    border-bottom: 2px solid  #112853;
 }
 
 #menu-header-menu > li.menu-item:hover {

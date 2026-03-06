@@ -2,7 +2,7 @@
 
 <?php wp_footer(); ?>
 
-<footer class="bg-gray-800 text-white px-4 pt-24 pb-5 sharp-curve-reverse">
+<footer style="background: #112853" class="bg-gray-800 text-white px-4 pt-24 pb-5 sharp-curve-reverse">
     <div class="container mx-auto px-4 max-w-6xl">
 
         <!-- Grid -->
@@ -70,10 +70,6 @@
                     +83 53 533 9204
                 </p>
 
-                <p class="text-[color:#9ca3af] mb-4 flex items-start gap-2">
-                    <i class="fas fa-mobile mt-1"></i>
-                    +83 90 9949 1606
-                </p>
             </div>
 
         </div>

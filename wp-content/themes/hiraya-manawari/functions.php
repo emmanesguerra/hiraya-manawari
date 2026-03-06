@@ -186,7 +186,7 @@ function hiraya_handle_contact_form() {
     $message = sanitize_textarea_field($_POST['message']);
 
     // Change this to your real domain email
-    $to = 'emmanesguerra2013@gmail.com';
+    $to = 'info@hiraya-manawari.com';
 
     $mail_subject = 'Contact Form: ' . $subject;
 
@@ -196,7 +196,7 @@ function hiraya_handle_contact_form() {
 
     $headers = array(
         'Content-Type: text/plain; charset=UTF-8',
-        'From: Hiraya Website <no-reply@yourdomain.com>',
+        'From: Hiraya Website <info@hiraya-manawari.com>',
         'Reply-To: ' . $name . ' <' . $email . '>',
     );
 

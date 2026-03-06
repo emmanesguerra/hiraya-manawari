@@ -15,7 +15,7 @@
 
 <header>
     <!-- NAVBAR -->
-    <nav id="navbar" class="relative md:fixed md:top-0 w-full bg-blue-600 text-white z-50 transition-all duration-300">
+    <nav id="navbar" style="background: #112853" class="relative md:fixed md:top-0 w-full bg-gray-800 text-white z-50 transition-all duration-300">
         <div class="container mx-auto px-4 flex justify-between items-center py-4">
 
             <!-- Logo -->
@@ -52,7 +52,7 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-blue-600 px-4 pb-4">
+        <div id="mobile-menu"  style="background: #112853" class="hidden md:hidden bg-blue-600 px-4 pb-4">
             <?php
             wp_nav_menu([
                 'theme_location' => 'primary',
